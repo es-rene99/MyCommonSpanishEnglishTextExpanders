@@ -1,0 +1,51 @@
+matches:
+    - trigger: ":bd"
+      replace: "Buen dia"
+    - trigger: ":bsd"
+      replace: "Buenos dias"
+    - trigger: ":bt"
+      replace: "Buenas tardes"
+    - trigger: ":bn"
+      replace: "Buenas noches"
+    - trigger: ":gm"
+      replace: "Good morning"
+    - trigger: ":ga"
+      replace: "Good afternoon"
+    - trigger: ":ge"
+      replace: "Good evening"
+    - trigger: ":sc"
+      replace: "Saludos cordiales,"
+    - trigger: ":yw"
+      replace: "You're welcome"
+    - trigger: ":dn"
+      replace: "De nada"
+    - trigger: ":tod"
+      replace: "{{mydate}}"
+      vars:
+          - name: mydate
+            type: date
+            params:
+                format: "%Y-%m-%d"
+    - trigger: ":yes"
+      replace: "{{yest}}"
+      vars:
+          - name: yest
+            type: date
+            params:
+                format: "%Y-%m-%d"
+                offset: -86400
+    - trigger: ":tom"
+      replace: "{{tomo}}"
+      vars:
+          - name: tomo
+            type: date
+            params:
+                format: "%Y-%m-%d"
+                offset: 86400
+    - trigger: ":test"
+      replace: "{{myTest}}"
+      vars:
+          - name: myTest
+            type: date
+            params:
+                format: "%Y%m%d%H%M%S"
