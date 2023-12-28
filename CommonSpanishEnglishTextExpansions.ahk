@@ -1,16 +1,18 @@
 #NoEnv  
 SendMode Input 
 SetWorkingDir %A_ScriptDir% 
-:::bd::Buen dia 
-:::bsd::Buenos dias 
-:::bt::Buenas tardes 
-:::bn::Buenas noches 
-:::gm::Good morning 
-:::ga::Good afternoon 
-:::ge::Good evening 
-:::sc::Saludos cordiales, 
-:::yw::You're welcome 
-:::dn::De nada 
+:*::bd::Buen dia 
+:*::bsd::Buenos dias 
+:*::bt::Buenas tardes 
+:*::bn::Buenas noches 
+:*::gm::Good morning 
+:*::ga::Good afternoon 
+:*::ge::Good evening 
+:*::gd::Good day
+:*::sc::Saludos cordiales, 
+:*::br::Best regards, 
+:*::yw::You're welcome 
+:*::dn::De nada
 :*::tod:: 
 Send, %A_YYYY%-%A_MM%-%A_DD%
 return
