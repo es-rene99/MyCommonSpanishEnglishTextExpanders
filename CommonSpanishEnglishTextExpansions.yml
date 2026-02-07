@@ -25,11 +25,26 @@ matches:
           - name: mydate
             type: date
             params:
+                format: "%Y%m%d"
+    - trigger: ":ftod"
+      replace: "{{mydatef}}"
+      vars:
+          - name: mydatef
+            type: date
+            params:
                 format: "%Y-%m-%d"
     - trigger: ":yes"
       replace: "{{yest}}"
       vars:
           - name: yest
+            type: date
+            params:
+                format: "%Y%m%d"
+                offset: -86400
+    - trigger: ":fyes"
+      replace: "{{yestf}}"
+      vars:
+          - name: yestf
             type: date
             params:
                 format: "%Y-%m-%d"
@@ -38,6 +53,14 @@ matches:
       replace: "{{tomo}}"
       vars:
           - name: tomo
+            type: date
+            params:
+                format: "%Y%m%d"
+                offset: 86400
+    - trigger: ":ftom"
+      replace: "{{tomof}}"
+      vars:
+          - name: tomof
             type: date
             params:
                 format: "%Y-%m-%d"
@@ -49,3 +72,10 @@ matches:
             type: date
             params:
                 format: "%Y%m%d%H%M%S"
+    - trigger: ":ftest"
+      replace: "{{myTestf}}"
+      vars:
+          - name: myTestf
+            type: date
+            params:
+                format: "%Y-%m-%d.%H.%M.%S"
